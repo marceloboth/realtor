@@ -1,0 +1,86 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/rails/app/models/user.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/rails/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/rails/app/components/notification/flash_message_component.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/rails/app/components/search/house_card_component.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/rails/app/models/house.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/rails/app/controllers/search_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/rails/app/controllers/authenticated_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/rails/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1674397641
+  }
+}
