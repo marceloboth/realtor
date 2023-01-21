@@ -32,6 +32,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+      - REDIS_URL=${REDIS_URL}
     container_name: realtor-ruby
     working_dir: /rails
     restart: always

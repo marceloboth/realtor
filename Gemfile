@@ -54,3 +54,9 @@ end
 
 # UI
 gem 'view_component'
+
+# utilities
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
+gem 'faraday'
+gem 'nokogiri'
