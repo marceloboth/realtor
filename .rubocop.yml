@@ -1,0 +1,206 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - db/**/*
+    - bin/*
+    - vendor/**/*
+    - tmp/**/*
+  NewCops: enable
+Bundler/OrderedGems:
+  Enabled: false
+Layout/ArgumentAlignment:
+  Enabled: false
+Layout/ArrayAlignment:
+  Enabled: false
+Layout/BeginEndAlignment:
+  Enabled: false
+Layout/FirstArrayElementIndentation:
+  Exclude:
+    - spec_ether/**/*
+Layout/FirstHashElementIndentation:
+  Exclude:
+    - spec_ether/**/*
+Layout/HashAlignment:
+  Enabled: false
+Layout/LineLength:
+  Enabled: false
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+Layout/RescueEnsureAlignment:
+  Enabled: false
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+Lint/DeprecatedConstants:
+  Enabled: false
+Lint/MissingSuper:
+  Enabled: false
+Lint/NestedMethodDefinition:
+  Exclude:
+    - spec/**/*
+Lint/NonDeterministicRequireOrder:
+  Exclude:
+    - spec/**/*
+Lint/RedundantCopDisableDirective:
+  Enabled: false
+Lint/ShadowingOuterLocalVariable:
+  Exclude:
+    - spec_ether/**/*
+Lint/StructNewOverride:
+  Enabled: false
+Lint/UriEscapeUnescape:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/ParameterLists:
+  Exclude:
+    - spec/**/*
+Metrics/PerceivedComplexity:
+  Enabled: false
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+Naming/MethodParameterName:
+  MinNameLength: 2
+Naming/PredicateName:
+  Enabled: false
+Naming/VariableNumber:
+  CheckMethodNames: false
+  CheckSymbols: false
+  Exclude:
+    - spec/**/*
+Rails/ActiveRecordAliases:
+  Enabled: false
+Rails/ActiveRecordCallbacksOrder:
+  Enabled: false
+Rails/ApplicationController:
+  Enabled: false
+Rails/ApplicationMailer:
+  Enabled: false
+Rails/ApplicationRecord:
+  Enabled: false
+Rails/ContentTag:
+  Enabled: false
+Rails/Date:
+  Exclude:
+    - spec/**/*
+Rails/Delegate:
+  Enabled: false
+Rails/DynamicFindBy:
+  Enabled: false
+Rails/FilePath:
+  Enabled: false
+Rails/FindEach:
+  Enabled: false
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+Rails/InverseOf:
+  Enabled: false
+Rails/NotNullColumn:
+  Enabled: false
+Rails/Output:
+  Exclude:
+    - config/**/*.rb
+Rails/OutputSafety:
+  Enabled: false
+Rails/PluckInWhere:
+  Enabled: false
+Rails/PluralizationGrammar:
+  Exclude:
+    - db/migrate/*
+Rails/RakeEnvironment:
+  Enabled: false
+Rails/RedundantPresenceValidationOnBelongsTo:
+  Enabled: false
+Rails/ReflectionClassName:
+  Enabled: true
+Rails/RenderInline:
+  Enabled: false
+Rails/RequestReferer:
+  Enabled: false
+Rails/ReversibleMigration:
+  Enabled: false
+Rails/SkipsModelValidations:
+  Enabled: false
+Rails/SquishedSQLHeredocs:
+  Enabled: false
+Rails/UnknownEnv:
+  Enabled: false
+Security/YAMLLoad:
+  Exclude:
+    - spec/**/*
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
+Style/ExpandPathArguments:
+  Enabled: false
+Style/FetchEnvVar:
+  Enabled: false
+Style/FormatString:
+  Exclude:
+    - spec/**/*
+Style/FormatStringToken:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/GlobalVars:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/HashAsLastArrayItem:
+  Enabled: false
+Style/HashConversion:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/NumericLiterals:
+  Exclude:
+    - spec/**/*
+Style/OpenStructUse:
+  Enabled: false
+Style/OptionalBooleanParameter:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/RedundantBegin:
+  Enabled: false
+Style/SignalException:
+  Enabled: false
+Style/SingleArgumentDig:
+  Enabled: false
+Style/StringConcatenation:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: false
+Style/TrailingCommaInArguments:
+  Enabled: false
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+Style/WordArray:
+  Enabled: false

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+./bin/bundle install
+./bin/yarn install
+./bin/rails db:create
+./bin/rails db:prepare
+
+exec "${@}"

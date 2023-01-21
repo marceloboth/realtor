@@ -1,0 +1,51 @@
+version: '3.4'
+
+services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: realtor-postgres
+    volumes:
+      - db:/var/lib/postgresql/data
+    command:
+      "postgres -c 'max_connections=500'"
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+  redis:
+    image: redis:alpine3.8
+    container_name: realtor-redis
+    mem_limit: 256m
+    volumes:
+      - redis-data:/var/lib/redis/data
+    ports:
+      - "6379:6379"
+    restart: on-failure
+    logging:
+      driver: none
+
+  ruby:
+    build: .
+    environment:
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+    container_name: realtor-ruby
+    working_dir: /rails
+    restart: always
+    tty: true
+    volumes:
+      - .:/rails
+      - app-storage:/rails/storage
+    ports:
+      - "3000:3000"
+volumes:
+  db: {}
+  redis-data: {}
+  app-storage: {}
+
+networks:
+  default:
+    name: realtor
