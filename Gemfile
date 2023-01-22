@@ -47,17 +47,19 @@ group :test do
 end
 
 group :production do
-  # gem 'yabeda-sidekiq', require: false
-  # gem 'yabeda-puma-plugin', require: false
-
   gem 'lograge'
 end
 
 # UI
 gem 'view_component'
 
-# utilities
+# Search
+gem 'ransack'
+
+# background job
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
+
+# http request and scrapping
 gem 'faraday'
 gem 'nokogiri'

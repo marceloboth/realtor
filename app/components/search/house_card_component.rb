@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Search::HouseCardComponent < ViewComponent::Base
+class Search::HouseCardComponent < BaseViewComponent
   def initialize(house)
     @house = house
   end

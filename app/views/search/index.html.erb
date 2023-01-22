@@ -3,6 +3,22 @@
     <h2 class="sr-only">Houses</h2>
 
     <div class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">
+      <%= search_form_for @query, url: search_index_path do |f| %>
+        <%= f.label :address_cont %>
+        <%= f.search_field :address_cont %>
+
+        <%= f.label :bedrooms_gteq %>
+        <%= f.search_field :bedrooms_gteq %>
+
+        <%= f.label :bathrooms_gteq %>
+        <%= f.search_field :bathrooms_gteq %>
+
+        <%= f.label :price_lteq %>
+        <%= f.search_field :price_lteq %>
+
+        <%= f.submit %>
+      <% end %>
+
       <% @houses.each do |house| %>
         <%= render Search::HouseCardComponent.new(house) %>
       <% end %>
