@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :dashboard, only: :index
+  resources :search, only: :index
 
-  root to: 'dashboard#index'
+  root to: 'search#index'
 end
