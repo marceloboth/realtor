@@ -2,6 +2,6 @@
 
 class SearchController < AuthenticatedController
   def index
-    @houses = House.all
+    @houses = House.all.order(:price)
   end
 end
