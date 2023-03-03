@@ -2,6 +2,7 @@
 
 class SearchController < AuthenticatedController
   def index
-    @houses = House.all
+    @query = House.ransack(params[:query])
+    @houses = @query.result(distinct: true)
   end
 end
