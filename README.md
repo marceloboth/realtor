@@ -2,12 +2,18 @@
 
 Run docker compose to build all containers
 
-`docker compose up -d --build`
+```shell
+docker compose up -d --build
+```
 
 Install dependencies and create the database
 
-`docker exec -it container-name bin/docker-entrypoint`
+```shell
+docker exec -it realtor-ruby bin/docker-entrypoint
+```
 
-`docker exec -it container-name bin/dev`
+```shell
+docker exec -it realtor-ruby bin/dev
+```
 
 open localhost:3000
